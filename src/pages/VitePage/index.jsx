@@ -1,3 +1,4 @@
+import { Browser } from '@capacitor/browser';
 import { Button, Typography } from '@mui/material';
 import { ViteLogo, footerHeight } from '../../assets';
 import { CenteredContent } from '../../containers';
@@ -13,11 +14,15 @@ const VitePage = () => {
     setCounter(prevState => prevState + 1);
   };
 
+  const openLink = async () => {
+    await Browser.open({ url: 'https://vitejs.dev/' });
+  };
+
   return (
     <CenteredContent>
       <ViteLogo size={100} />
       <ButtonContainer>
-        <Button>Link</Button>
+        <Button onClick={openLink}>Link</Button>
       </ButtonContainer>
       <CounterContainer>
         <Typography>Counter: {counter}</Typography>
