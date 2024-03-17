@@ -14,6 +14,7 @@ const AppThemeProvider = ({ children }) => {
 
   const applyInsets = async () => {
     const { insets } = await SafeArea.getSafeAreaInsets();
+    console.log('🚀 ~ applyInsets ~ insets:', insets);
     setInsets(insets);
   };
 
