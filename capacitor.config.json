@@ -1,0 +1,8 @@
+{
+  "appId": "com.browserinsets.www",
+  "appName": "capacitor-browser-insets",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
